@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Loft Conversions, Kitchen & Bathroom Renovations | Adrian & Sons</title>
+    <meta name="description" content="Comprehensive home renovation services including loft conversions, kitchen installations, bathroom renovations, home extensions, and full refurbishments. Free quotes available.">
+    <meta name="keywords" content="loft conversion, kitchen installation, bathroom renovation, home extension, refurbishment, UK builders, renovation services">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Services - Loft Conversions, Kitchen & Bathroom Renovations | Adrian & Sons">
+    <meta property="og:description" content="Comprehensive home renovation services including loft conversions, kitchen installations, bathroom renovations, home extensions, and full refurbishments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adrianandsonsgrouplimited.co.uk/services">
+    
+    <link rel="canonical" href="https://adrianandsonsgrouplimited.co.uk/services">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #22c55e;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+        
+        .nav-link.active {
+            color: #f59e0b;
+            font-weight: 600;
+        }
+        
+        .sticky-phone {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 50;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .side-nav {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .side-nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .side-nav-link:hover {
+            color: #f59e0b;
+            padding-left: 1rem;
+        }
+        
+        .side-nav-link.active {
+            color: #f59e0b;
+            font-weight: 600;
+            border-left: 3px solid #f59e0b;
+            padding-left: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .side-nav {
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-40">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold">
+                        <span class="text-amber-600">Adrian</span> & Sons
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700">About</a>
+                    <a href="services.html" class="nav-link active text-gray-900">Services</a>
+                    <a href="projects.html" class="nav-link text-gray-700">Projects</a>
+                    <a href="reviews.html" class="nav-link text-gray-700">Reviews</a>
+                    <a href="contact.html" class="nav-link text-gray-700">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html" class="btn-primary text-white px-6 py-2 rounded-lg font-semibold">
+                        Contact Now
+                    </a>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4 border-t border-gray-200">
+                    <a href="index.html" class="block nav-link text-gray-700">Home</a>
+                    <a href="about.html" class="block nav-link text-gray-700">About</a>
+                    <a href="services.html" class="block nav-link active text-gray-900">Services</a>
+                    <a href="projects.html" class="block nav-link text-gray-700">Projects</a>
+                    <a href="reviews.html" class="block nav-link text-gray-700">Reviews</a>
+                    <a href="contact.html" class="block nav-link text-gray-700">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sticky Phone CTA -->
+    <div class="sticky-phone">
+        <a href="tel:07710563430" class="btn-secondary text-white p-4 rounded-full shadow-lg inline-flex items-center">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Services
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                From single-room renovations to complete home transformations, we deliver exceptional results with quality craftsmanship and attention to detail
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <!-- Side Navigation -->
+                <div class="lg:col-span-1">
+                    <div class="side-nav bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-gray-900 mb-4">Our Services</h3>
+                        <nav class="space-y-3">
+                            <a href="#renovation" class="side-nav-link block text-gray-600 py-2 border-l-3 border-transparent">
+                                <i class="fas fa-stairs mr-2"></i>Loft Conversions
+                            </a>
+                            <a href="#refurbishment" class="side-nav-link block text-gray-600 py-2 border-l-3 border-transparent">
+                                <i class="fas fa-utensils mr-2"></i>Kitchen & Bathroom
+                            </a>
+                            <a href="#home-rebuilds" class="side-nav-link block text-gray-600 py-2 border-l-3 border-transparent">
+                                <i class="fas fa-home mr-2"></i>Home Extensions
+                            </a>
+                        </nav>
+                        
+                        <div class="mt-8 p-4 bg-amber-50 rounded-lg">
+                            <h4 class="font-bold text-gray-900 mb-2">Need a Quote?</h4>
+                            <p class="text-sm text-gray-600 mb-3">Get a free, no-obligation quote for your project</p>
+                            <a href="contact.html" class="btn-primary text-white px-4 py-2 rounded text-sm font-semibold inline-block">
+                                Get Free Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="lg:col-span-3 space-y-16">
+                    
+                    <!-- Renovation Section -->
+                    <section id="renovation" class="scroll-mt-20">
+                        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-stairs text-amber-600 text-2xl"></i>
+                                </div>
+                                <h2 class="text-3xl font-bold text-gray-900">Loft Conversions</h2>
+                            </div>
+                            
+                            <p class="text-lg text-gray-600 mb-6">
+                                We are your point of contact for extensions to bring extra space to your home. Our loft conversion services transform unused attic space into beautiful, functional rooms that add significant value to your property.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4">What We Include:</h3>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Structural modifications and reinforcement
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Staircase installation and access
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Electrical and plumbing work
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Insulation and ventilation
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Windows and skylights
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Interior finishing and decoration
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="grid grid-cols-3 gap-4">
+                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Loft conversion before - dark unfinished attic" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                    <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Loft conversion after - bright converted bedroom" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Loft conversion process - construction work" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="contact.html" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    Get Quote for Loft Conversion
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Refurbishment Section -->
+                    <section id="refurbishment" class="scroll-mt-20">
+                        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-utensils text-blue-600 text-2xl"></i>
+                                </div>
+                                <h2 class="text-3xl font-bold text-gray-900">Kitchen & Bathroom Refurbishment</h2>
+                            </div>
+                            
+                            <p class="text-lg text-gray-600 mb-6">
+                                Modernise your spaces with our comprehensive kitchen and bathroom refurbishment services. We transform outdated rooms into contemporary, functional spaces that enhance your daily life and increase your property value.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4">Kitchen Services:</h3>
+                                    <ul class="space-y-2 text-gray-600 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Custom kitchen design and planning
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Cabinet and worktop installation
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Appliance fitting and plumbing
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Electrical work and lighting
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Flooring and tiling
+                                        </li>
+                                    </ul>
+                                    
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4">Bathroom Services:</h3>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Complete bathroom redesign
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Fixture and fitting installation
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Plumbing and electrical work
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Tiling and waterproofing
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Ventilation and heating
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="grid grid-cols-3 gap-4">
+                                    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Kitchen renovation - modern kitchen design" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Bathroom renovation - luxury bathroom" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Kitchen and bathroom work in progress" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="contact.html" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    Get Quote for Refurbishment
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Home Rebuilds Section -->
+                    <section id="home-rebuilds" class="scroll-mt-20">
+                        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-home text-purple-600 text-2xl"></i>
+                                </div>
+                                <h2 class="text-3xl font-bold text-gray-900">Home Extensions & Full Refurbishments</h2>
+                            </div>
+                            
+                            <p class="text-lg text-gray-600 mb-6">
+                                Work with our experienced team to extend, modernise, and transform your home. We collaborate with architects and designers to create stunning facelifts and comprehensive home transformations that exceed expectations.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4">Extension Services:</h3>
+                                    <ul class="space-y-2 text-gray-600 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Single and multi-storey extensions
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Conservatory and sunroom construction
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Garage conversions and outbuildings
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Structural modifications and foundations
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Roofing and external finishes
+                                        </li>
+                                    </ul>
+                                    
+                                    <h3 class="text-xl font-bold text-gray-900 mb-4">Full Refurbishment:</h3>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Complete home modernisation
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Interior and exterior renovations
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Structural improvements
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Energy efficiency upgrades
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Landscaping and external works
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="grid grid-cols-3 gap-4">
+                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Home extension - modern extension project" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Full home refurbishment - complete transformation" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                         alt="Home extension and landscaping work" 
+                                         class="rounded-lg shadow-md" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="contact.html" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    Get Quote for Extension
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Start Your Project?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Get a free, no-obligation quote for any of our services. We'll respond within 24 hours.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="contact.html" class="bg-white text-amber-600 px-10 py-4 rounded-lg text-xl font-bold inline-flex items-center hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-envelope mr-3"></i>
+                    Get Free Quote
+                </a>
+                <a href="tel:07710563430" class="bg-green-600 text-white px-10 py-4 rounded-lg text-xl font-bold inline-flex items-center hover:bg-green-700 transition-colors">
+                    <i class="fas fa-phone mr-3"></i>
+                    Call Now: 07710 563 430
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="mb-4">
+                        <span class="text-xl font-bold">
+                            <span class="text-amber-400">Adrian</span> & Sons Group Limited
+                        </span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your trusted partner for quality home renovations across the UK. Family-owned and operated with over 10 years of experience.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="tel:07710563430" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fas fa-phone mr-2"></i>07710 563 430
+                        </a>
+                        <a href="mailto:info@adrianandsonsgrouplimited.co.uk" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>info@adrianandsonsgrouplimited.co.uk
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-amber-400 transition-colors">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-amber-400 transition-colors">Projects</a></li>
+                        <li><a href="reviews.html" class="text-gray-400 hover:text-amber-400 transition-colors">Reviews</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-amber-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#renovation" class="text-gray-400 hover:text-amber-400 transition-colors">Loft Conversions</a></li>
+                        <li><a href="services.html#refurbishment" class="text-gray-400 hover:text-amber-400 transition-colors">Kitchen Installations</a></li>
+                        <li><a href="services.html#refurbishment" class="text-gray-400 hover:text-amber-400 transition-colors">Bathroom Renovations</a></li>
+                        <li><a href="services.html#home-rebuilds" class="text-gray-400 hover:text-amber-400 transition-colors">Home Extensions</a></li>
+                        <li><a href="services.html#home-rebuilds" class="text-gray-400 hover:text-amber-400 transition-colors">Full Refurbishments</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Adrian and Sons Group Limited. All rights reserved. | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="site.js"></script>
+</body>
+</html>

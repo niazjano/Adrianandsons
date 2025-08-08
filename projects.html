@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - See for yourself! | Adrian & Sons</title>
+    <meta name="description" content="Browse our portfolio of completed projects including loft conversions, kitchen renovations, bathroom remodels, and home extensions. Real transformations from real clients.">
+    <meta name="keywords" content="home renovation projects, loft conversion gallery, kitchen renovation examples, bathroom remodel portfolio, UK builders projects">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Projects - See for yourself! | Adrian & Sons">
+    <meta property="og:description" content="Browse our portfolio of completed projects including loft conversions, kitchen renovations, bathroom remodels, and home extensions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adrianandsonsgrouplimited.co.uk/projects">
+    
+    <link rel="canonical" href="https://adrianandsonsgrouplimited.co.uk/projects">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #22c55e;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+        
+        .nav-link.active {
+            color: #f59e0b;
+            font-weight: 600;
+        }
+        
+        .sticky-phone {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 50;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-image {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .lightbox img {
+            max-height: 90vh;
+            max-width: 90vw;
+            object-fit: contain;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .lightbox-prev {
+            left: 2rem;
+        }
+        
+        .lightbox-next {
+            right: 2rem;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-40">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold">
+                        <span class="text-amber-600">Adrian</span> & Sons
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700">About</a>
+                    <a href="services.html" class="nav-link text-gray-700">Services</a>
+                    <a href="projects.html" class="nav-link active text-gray-900">Projects</a>
+                    <a href="reviews.html" class="nav-link text-gray-700">Reviews</a>
+                    <a href="contact.html" class="nav-link text-gray-700">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html" class="btn-primary text-white px-6 py-2 rounded-lg font-semibold">
+                        Contact Now
+                    </a>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4 border-t border-gray-200">
+                    <a href="index.html" class="block nav-link text-gray-700">Home</a>
+                    <a href="about.html" class="block nav-link text-gray-700">About</a>
+                    <a href="services.html" class="block nav-link text-gray-700">Services</a>
+                    <a href="projects.html" class="block nav-link active text-gray-900">Projects</a>
+                    <a href="reviews.html" class="block nav-link text-gray-700">Reviews</a>
+                    <a href="contact.html" class="block nav-link text-gray-700">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sticky Phone CTA -->
+    <div class="sticky-phone">
+        <a href="tel:07710563430" class="btn-secondary text-white p-4 rounded-full shadow-lg inline-flex items-center">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Projects – See for yourself!
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Real transformations from real clients. Browse our portfolio of completed projects and see the quality of our work.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-8 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold" data-filter="extensions">
+                    Extensions
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold" data-filter="kitchens">
+                    Kitchens
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold" data-filter="bathrooms">
+                    Bathrooms
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold" data-filter="remodel">
+                    Full Remodel
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Full Home Remodel -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="remodel">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Full home remodel project - extension and basement work" 
+                             class="w-full h-64 object-cover gallery-image" loading="lazy" decoding="async">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Full Remodel</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Full Home Remodel</h3>
+                        <p class="text-gray-600 mb-4">Extension + basement + facelift transformation in Surrey</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Extension</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Basement</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-semibold">Facelift</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Home remodel before" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Home remodel during" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Home remodel after" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extensions and Landscaping -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="extensions">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Extensions and landscaping project" 
+                             class="w-full h-64 object-cover gallery-image" loading="lazy" decoding="async">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Extension</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Extensions and Landscaping</h3>
+                        <p class="text-gray-600 mb-4">Complete rear extension with garden transformation in London</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Extension</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Landscaping</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Extension before" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Extension during" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Extension after" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extensions & Kitchens -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="kitchens">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Extensions and kitchens project" 
+                             class="w-full h-64 object-cover gallery-image" loading="lazy" decoding="async">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Kitchen</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Extensions & Kitchens</h3>
+                        <p class="text-gray-600 mb-4">Kitchen extension with modern design in Manchester</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Extension</span>
+                            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded text-xs font-semibold">Kitchen</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Kitchen extension before" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Kitchen extension during" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Kitchen extension after" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bathrooms -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="bathrooms">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Bathroom renovation project" 
+                             class="w-full h-64 object-cover gallery-image" loading="lazy" decoding="async">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Bathroom</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Bathrooms</h3>
+                        <p class="text-gray-600 mb-4">Luxury bathroom renovation with spa-like features</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Bathroom</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-semibold">Luxury</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Bathroom before" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Bathroom during" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Bathroom after" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Loft Conversion -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="extensions">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Loft conversion project" 
+                             class="w-full h-64 object-cover gallery-image" loading="lazy" decoding="async">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Extension</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Loft Conversion</h3>
+                        <p class="text-gray-600 mb-4">Unused attic transformed into beautiful bedroom with en-suite</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Loft</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Bedroom</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Loft conversion before" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Loft conversion during" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Loft conversion after" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kitchen Renovation -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="kitchens">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Kitchen renovation project" 
+                             class="w-full h-64 object-cover gallery-image" loading="lazy" decoding="async">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Kitchen</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Kitchen Renovation</h3>
+                        <p class="text-gray-600 mb-4">Complete kitchen transformation with modern appliances</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded text-xs font-semibold">Kitchen</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Modern</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Kitchen before" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Kitchen during" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Kitchen after" class="w-full h-20 object-cover rounded gallery-image" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Start Your Project?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Inspired by our work? Let's discuss your vision and create something amazing together.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="contact.html" class="bg-white text-amber-600 px-10 py-4 rounded-lg text-xl font-bold inline-flex items-center hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-envelope mr-3"></i>
+                    Get Free Quote
+                </a>
+                <a href="tel:07710563430" class="bg-green-600 text-white px-10 py-4 rounded-lg text-xl font-bold inline-flex items-center hover:bg-green-700 transition-colors">
+                    <i class="fas fa-phone mr-3"></i>
+                    Call Now: 07710 563 430
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox hidden">
+        <button id="lightbox-close" class="lightbox-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <button id="lightbox-prev" class="lightbox-nav lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="lightbox-next" class="lightbox-nav lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img id="lightbox-image" src="" alt="" class="lightbox-img">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="mb-4">
+                        <span class="text-xl font-bold">
+                            <span class="text-amber-400">Adrian</span> & Sons Group Limited
+                        </span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Your trusted partner for quality home renovations across the UK. Family-owned and operated with over 10 years of experience.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="tel:07710563430" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fas fa-phone mr-2"></i>07710 563 430
+                        </a>
+                        <a href="mailto:info@adrianandsonsgrouplimited.co.uk" class="text-gray-400 hover:text-amber-400 transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>info@adrianandsonsgrouplimited.co.uk
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-amber-400 transition-colors">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-amber-400 transition-colors">Projects</a></li>
+                        <li><a href="reviews.html" class="text-gray-400 hover:text-amber-400 transition-colors">Reviews</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-amber-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#renovation" class="text-gray-400 hover:text-amber-400 transition-colors">Loft Conversions</a></li>
+                        <li><a href="services.html#refurbishment" class="text-gray-400 hover:text-amber-400 transition-colors">Kitchen Installations</a></li>
+                        <li><a href="services.html#refurbishment" class="text-gray-400 hover:text-amber-400 transition-colors">Bathroom Renovations</a></li>
+                        <li><a href="services.html#home-rebuilds" class="text-gray-400 hover:text-amber-400 transition-colors">Home Extensions</a></li>
+                        <li><a href="services.html#home-rebuilds" class="text-gray-400 hover:text-amber-400 transition-colors">Full Refurbishments</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Adrian and Sons Group Limited. All rights reserved. | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="site.js"></script>
+</body>
+</html>
