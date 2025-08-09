@@ -5,10 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroVideo = document.querySelector('.hero-video');
     
     if (heroVideo) {
+        // Ensure video loops on all devices
+        heroVideo.loop = true;
+        
         // Handle video loading
         heroVideo.addEventListener('loadeddata', function() {
             // Video loaded successfully
             console.log('Hero video loaded successfully');
+            
+            // Ensure video starts playing and looping
+            heroVideo.play().catch(function(error) {
+                console.log('Video autoplay failed:', error);
+            });
         });
         
         // Handle video errors
@@ -18,16 +26,34 @@ document.addEventListener('DOMContentLoaded', function() {
             heroVideo.style.display = 'none';
         });
         
-        // Video plays on all devices including mobile
+        // Handle video end to ensure it loops
+        heroVideo.addEventListener('ended', function() {
+            console.log('Video ended, restarting loop');
+            heroVideo.currentTime = 0;
+            heroVideo.play().catch(function(error) {
+                console.log('Video loop restart failed:', error);
+            });
+        });
+        
         // Handle orientation change on mobile
         window.addEventListener('orientationchange', function() {
             setTimeout(() => {
                 // Ensure video is visible and playing after orientation change
                 heroVideo.style.display = 'block';
+                heroVideo.loop = true;
                 heroVideo.play().catch(function(error) {
-                    console.log('Video autoplay failed:', error);
+                    console.log('Video autoplay failed after orientation change:', error);
                 });
             }, 100);
+        });
+        
+        // Handle page visibility changes (when user switches tabs)
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden && heroVideo.paused) {
+                heroVideo.play().catch(function(error) {
+                    console.log('Video restart failed on page visibility change:', error);
+                });
+            }
         });
     }
 });

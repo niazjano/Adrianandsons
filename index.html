@@ -228,6 +228,9 @@
             .hero-video {
                 object-position: center;
                 display: block !important;
+                /* Ensure video loops properly on mobile */
+                -webkit-playsinline: true;
+                playsinline: true;
             }
             
             .hero-headline {
