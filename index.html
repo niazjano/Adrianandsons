@@ -52,13 +52,73 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);
+            background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 100%);
             z-index: 2;
         }
         
         .hero-content {
             position: relative;
             z-index: 3;
+        }
+        
+        /* Modern mobile hero styles */
+        .hero-headline {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .hero-subheadline {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            line-height: 1.4;
+        }
+        
+        .hero-cta-primary {
+            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+            border-radius: 12px;
+            padding: 16px 32px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-cta-primary:hover {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(234, 88, 12, 0.4);
+        }
+        
+        .hero-cta-secondary {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            border-radius: 12px;
+            padding: 16px 32px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-cta-secondary:hover {
+            background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(5, 150, 105, 0.4);
+        }
+        
+        .trust-stars {
+            color: #fbbf24;
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+        }
+        
+        .trust-badges {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 12px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .btn-primary {
@@ -161,11 +221,59 @@
         
         @media (max-width: 768px) {
             .hero-bg {
-                min-height: 80vh;
+                min-height: 90vh;
+                padding: 20px 0;
             }
             
             .hero-video {
                 object-position: center;
+            }
+            
+            .hero-headline {
+                font-size: 32px !important;
+                line-height: 1.1 !important;
+                margin-bottom: 16px !important;
+            }
+            
+            .hero-subheadline {
+                font-size: 18px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 32px !important;
+                max-width: 100% !important;
+            }
+            
+            .hero-cta-primary,
+            .hero-cta-secondary {
+                padding: 18px 28px !important;
+                font-size: 16px !important;
+                border-radius: 12px !important;
+                width: 100% !important;
+                max-width: 280px !important;
+                margin: 0 auto 12px !important;
+            }
+            
+            .trust-stars {
+                font-size: 20px !important;
+                margin-bottom: 16px !important;
+            }
+            
+            .trust-badges {
+                margin-top: 24px !important;
+                padding: 16px 20px !important;
+            }
+            
+            .trust-badges .flex {
+                flex-wrap: wrap !important;
+                gap: 12px !important;
+                justify-content: center !important;
+            }
+            
+            .trust-badges .flex > div {
+                font-size: 14px !important;
+                padding: 8px 12px !important;
+                background: rgba(255, 255, 255, 0.15) !important;
+                border-radius: 8px !important;
+                backdrop-filter: blur(5px) !important;
             }
         }
         
@@ -194,7 +302,7 @@
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center">
-                        <img src="images/logos/logo.png" alt="Adrian & Sons Logo" class="h-12 w-auto">
+                        <img src="images/logos/logo.png" alt="Adrian & Sons Logo" class="h-10 md:h-12 w-auto">
                     </a>
                 </div>
                 
@@ -208,7 +316,7 @@
                 </div>
                 
                 <div class="flex items-center space-x-4">
-                    <a href="contact.html" class="btn-primary text-white px-6 py-2 rounded-lg font-semibold">
+                    <a href="contact.html" class="border-2 border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all duration-300">
                         Contact Now
                     </a>
                     
@@ -254,40 +362,49 @@
         
         <!-- Content -->
         <div class="hero-content max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <!-- Trust Stars - Moved to top -->
+            <div class="trust-stars mb-6">
+                <i class="fas fa-star text-2xl md:text-3xl"></i>
+                <i class="fas fa-star text-2xl md:text-3xl"></i>
+                <i class="fas fa-star text-2xl md:text-3xl"></i>
+                <i class="fas fa-star text-2xl md:text-3xl"></i>
+                <i class="fas fa-star text-2xl md:text-3xl"></i>
+                <span class="ml-2 font-bold text-lg md:text-xl">5-Star Google Reviews</span>
+            </div>
+            
+            <h1 class="hero-headline text-4xl md:text-6xl mb-6">
                 Trusted Home Renovation Experts in the UK
             </h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                Get a Free Quote for Your Loft, Kitchen, Bathroom or Full Home Renovation
+            <p class="hero-subheadline text-xl md:text-2xl mb-8 opacity-95 max-w-3xl mx-auto">
+                Free Quote for Loft, Kitchen, Bathroom & Full Home Renovations
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#quote-form" class="btn-primary text-white px-10 py-4 rounded-lg text-xl font-bold inline-flex items-center pulse-cta">
-                    <i class="fas fa-calculator mr-3"></i>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="#quote-form" class="hero-cta-primary text-white inline-flex items-center justify-center pulse-cta">
+                    <i class="fas fa-calculator mr-3 text-lg"></i>
                     Get My Free Quote
                 </a>
-                <a href="tel:07710563430" class="btn-secondary text-white px-10 py-4 rounded-lg text-xl font-bold inline-flex items-center">
-                    <i class="fas fa-phone mr-3"></i>
+                <a href="tel:07710563430" class="hero-cta-secondary text-white inline-flex items-center justify-center">
+                    <i class="fas fa-phone mr-3 text-lg"></i>
                     Call Now: 07710 563 430
                 </a>
             </div>
             
-            <!-- Trust Indicators -->
-            <div class="mt-12 flex flex-wrap justify-center items-center gap-8 text-white opacity-90">
-                <div class="flex items-center">
-                    <i class="fas fa-star text-yellow-400 mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 mr-2"></i>
-                    <span class="font-semibold">5-Star Google Reviews</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-shield-alt mr-2 text-green-400"></i>
-                    <span class="font-semibold">Fully Insured</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-clock mr-2 text-blue-400"></i>
-                    <span class="font-semibold">24hr Quote Response</span>
+            <!-- Trust Badges - Modernized -->
+            <div class="trust-badges">
+                <div class="flex flex-wrap justify-center items-center gap-6 text-white">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt mr-2 text-green-400 text-lg"></i>
+                        <span class="font-semibold">Fully Insured</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock mr-2 text-blue-400 text-lg"></i>
+                        <span class="font-semibold">24hr Quote Response</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-home mr-2 text-amber-400 text-lg"></i>
+                        <span class="font-semibold">10+ Years Experience</span>
+                    </div>
                 </div>
             </div>
         </div>
