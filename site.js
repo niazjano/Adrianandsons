@@ -1,5 +1,44 @@
 // Site-wide JavaScript functionality
 
+// Hero video handling
+document.addEventListener('DOMContentLoaded', function() {
+    const heroVideo = document.querySelector('.hero-video');
+    
+    if (heroVideo) {
+        // Handle video loading
+        heroVideo.addEventListener('loadeddata', function() {
+            // Video loaded successfully
+            console.log('Hero video loaded successfully');
+        });
+        
+        // Handle video errors
+        heroVideo.addEventListener('error', function() {
+            console.log('Hero video failed to load, using fallback');
+            // Hide video and show fallback background
+            heroVideo.style.display = 'none';
+        });
+        
+        // Pause video on mobile to save bandwidth (optional)
+        if (window.innerWidth <= 768) {
+            heroVideo.pause();
+            heroVideo.style.display = 'none';
+        }
+        
+        // Handle orientation change on mobile
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                if (window.innerWidth <= 768) {
+                    heroVideo.pause();
+                    heroVideo.style.display = 'none';
+                } else {
+                    heroVideo.style.display = 'block';
+                    heroVideo.play();
+                }
+            }, 100);
+        });
+    }
+});
+
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
