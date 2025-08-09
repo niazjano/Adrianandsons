@@ -18,22 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
             heroVideo.style.display = 'none';
         });
         
-        // Pause video on mobile to save bandwidth (optional)
-        if (window.innerWidth <= 768) {
-            heroVideo.pause();
-            heroVideo.style.display = 'none';
-        }
-        
+        // Video plays on all devices including mobile
         // Handle orientation change on mobile
         window.addEventListener('orientationchange', function() {
             setTimeout(() => {
-                if (window.innerWidth <= 768) {
-                    heroVideo.pause();
-                    heroVideo.style.display = 'none';
-                } else {
-                    heroVideo.style.display = 'block';
-                    heroVideo.play();
-                }
+                // Ensure video is visible and playing after orientation change
+                heroVideo.style.display = 'block';
+                heroVideo.play().catch(function(error) {
+                    console.log('Video autoplay failed:', error);
+                });
             }, 100);
         });
     }
