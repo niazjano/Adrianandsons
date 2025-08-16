@@ -156,31 +156,21 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
         
-        .before-after-card {
+        .project-card {
             transition: all 0.3s ease;
         }
         
-        .before-after-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
-        .before-after-card .before-image {
+        .project-card img {
             transition: all 0.3s ease;
         }
         
-        .before-after-card:hover .before-image {
-            opacity: 0.7;
-            transform: scale(0.95);
-        }
-        
-        .before-after-card .after-image {
-            transition: all 0.3s ease;
-        }
-        
-        .before-after-card:hover .after-image {
+        .project-card:hover img {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
         }
         
         .pulse-cta {
@@ -281,31 +271,30 @@
             }
             
             /* Mobile-specific project section improvements */
-            .before-after-card {
+            .project-card {
                 margin-bottom: 24px !important;
             }
             
-            .before-after-card .grid {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 8px !important;
+            .project-card .relative {
+                height: 200px !important;
             }
             
-            .before-after-card img {
-                height: 120px !important;
+            .project-card img {
+                height: 200px !important;
                 object-fit: cover !important;
             }
             
-            .before-after-card .p-4 {
-                padding: 16px !important;
+            .project-card .p-6 {
+                padding: 20px !important;
             }
             
-            .before-after-card h3 {
-                font-size: 18px !important;
-                margin-bottom: 8px !important;
+            .project-card h3 {
+                font-size: 20px !important;
+                margin-bottom: 12px !important;
             }
             
-            .before-after-card p {
-                font-size: 14px !important;
+            .project-card p {
+                font-size: 16px !important;
             }
         }
         
@@ -651,40 +640,32 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <!-- Kitchen Renovation -->
-                <a href="kitchen-renovation.html" class="before-after-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <div class="grid grid-cols-2">
-                        <div class="relative before-image">
-                            <img src="images/Projects/kitchen/kitchen.jpg" 
-                                 alt="Before kitchen renovation - outdated kitchen with old cabinets" class="w-full h-32 object-cover" loading="lazy" decoding="async">
-                        </div>
-                        <div class="relative after-image">
-                            <img src="images/Projects/kitchen/kitchen1.jpg" 
-                                 alt="After kitchen renovation - modern kitchen with couple" class="w-full h-32 object-cover" loading="lazy" decoding="async">
-                        </div>
+                <a href="kitchen-renovation.html" class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-64 md:h-80 overflow-hidden">
+                        <img src="images/Projects/kitchen/kitchen1.jpg" 
+                             alt="Kitchen renovation project showcase - modern kitchen transformation" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                             loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-gray-900 mb-1">Kitchen Renovation</h3>
-                        <p class="text-gray-600 text-sm">Complete kitchen transformation in Surrey</p>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 text-xl mb-2">Kitchen Renovation</h3>
+                        <p class="text-gray-600">Complete kitchen transformation in Surrey</p>
                     </div>
                 </a>
                 
-
-                
                 <!-- Bathroom Renovation -->
-                <a href="bathrooms.html" class="before-after-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <div class="grid grid-cols-2">
-                        <div class="relative before-image">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 alt="Before bathroom renovation - dated bathroom with old fixtures" class="w-full h-32 object-cover" loading="lazy" decoding="async">
-                        </div>
-                                                  <div class="relative after-image">
-                             <img src="images/Projects/bathroom/Bathrooms .jpg" 
-                                  alt="After bathroom renovation - luxury spa bathroom" class="w-full h-32 object-cover" loading="lazy" decoding="async">
-                          </div>
+                <a href="bathrooms.html" class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-64 md:h-80 overflow-hidden">
+                        <img src="images/Projects/bathroom/Bathrooms .jpg" 
+                             alt="Bathroom renovation project showcase - luxury spa bathroom transformation" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                             loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-gray-900 mb-1">Bathroom Renovation</h3>
-                        <p class="text-gray-600 text-sm">Luxury spa-like bathroom in Manchester</p>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 text-xl mb-2">Bathroom Renovation</h3>
+                        <p class="text-gray-600">Luxury spa-like bathroom in Manchester</p>
                     </div>
                 </a>
             </div>
