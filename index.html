@@ -279,6 +279,34 @@
                 border-radius: 8px !important;
                 backdrop-filter: blur(5px) !important;
             }
+            
+            /* Mobile-specific project section improvements */
+            .before-after-card {
+                margin-bottom: 24px !important;
+            }
+            
+            .before-after-card .grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 8px !important;
+            }
+            
+            .before-after-card img {
+                height: 120px !important;
+                object-fit: cover !important;
+            }
+            
+            .before-after-card .p-4 {
+                padding: 16px !important;
+            }
+            
+            .before-after-card h3 {
+                font-size: 18px !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .before-after-card p {
+                font-size: 14px !important;
+            }
         }
         
         /* Fallback for browsers that don't support video */
@@ -621,7 +649,7 @@
                 Real projects, real results from UK homeowners just like you
             </p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <!-- Kitchen Renovation -->
                 <a href="kitchen-renovation.html" class="before-after-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="grid grid-cols-2">
